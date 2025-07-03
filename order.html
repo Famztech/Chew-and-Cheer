@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online - Chew & Cheer Food and Drinks</title>
+    <meta name="description" content="Order your favorite food and drinks online from Chew & Cheer. Fast delivery and easy checkout.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Chew & Cheer Food and Drinks Logo" class="logo-img">
+                    <span class="logo-text">Chew & Cheer</span>
+                </div>
+                
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                    <li role="none"><a href="menu.html" class="nav-link" role="menuitem">Menu</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="order.html" class="nav-link order-btn active" role="menuitem" aria-current="page">Order Now</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="page-header">
+            <div class="container">
+                <h1>Place Your Order</h1>
+                <p>Complete your order details below</p>
+            </div>
+        </section>
+
+        <section class="order-section">
+            <div class="container">
+                <div class="order-container">
+                    <!-- Order Form -->
+                    <div class="order-form-container">
+                        <form class="order-form" id="order-form" novalidate>
+                            <div class="form-section">
+                                <h2>Customer Information</h2>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="customer-first-name">First Name <span class="required" aria-label="required">*</span></label>
+                                        <input type="text" id="customer-first-name" name="customerFirstName" required aria-describedby="customer-first-name-error">
+                                        <div class="error-message" id="customer-first-name-error" role="alert" aria-live="polite"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customer-last-name">Last Name <span class="required" aria-label="required">*</span></label>
+                                        <input type="text" id="customer-last-name" name="customerLastName" required aria-describedby="customer-last-name-error">
+                                        <div class="error-message" id="customer-last-name-error" role="alert" aria-live="polite"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="customer-email">Email Address <span class="required" aria-label="required">*</span></label>
+                                    <input type="email" id="customer-email" name="customerEmail" required aria-describedby="customer-email-error">
+                                    <div class="error-message" id="customer-email-error" role="alert" aria-live="polite"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="customer-phone">Phone Number <span class="required" aria-label="required">*</span></label>
+                                    <input type="tel" id="customer-phone" name="customerPhone" required aria-describedby="customer-phone-error">
+                                    <div class="error-message" id="customer-phone-error" role="alert" aria-live="polite"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h2>Delivery Information</h2>
+                                <div class="form-group">
+                                    <fieldset>
+                                        <legend>Order Type</legend>
+                                        <div class="radio-group">
+                                            <div class="radio-item">
+                                                <input type="radio" id="delivery" name="orderType" value="delivery" checked>
+                                                <label for="delivery">Delivery</label>
+                                            </div>
+                                            <div class="radio-item">
+                                                <input type="radio" id="pickup" name="orderType" value="pickup">
+                                                <label for="pickup">Pickup</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                
+                                <div class="delivery-fields">
+                                    <div class="form-group">
+                                        <label for="delivery-address">Delivery Address <span class="required" aria-label="required">*</span></label>
+                                        <input type="text" id="delivery-address" name="deliveryAddress" required aria-describedby="delivery-address-error">
+                                        <div class="error-message" id="delivery-address-error" role="alert" aria-live="polite"></div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="delivery-city">City <span class="required" aria-label="required">*</span></label>
+                                            <input type="text" id="delivery-city" name="deliveryCity" required aria-describedby="delivery-city-error">
+                                            <div class="error-message" id="delivery-city-error" role="alert" aria-live="polite"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="delivery-zip">ZIP Code <span class="required" aria-label="required">*</span></label>
+                                            <input type="text" id="delivery-zip" name="deliveryZip" required aria-describedby="delivery-zip-error">
+                                            <div class="error-message" id="delivery-zip-error" role="alert" aria-live="polite"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="delivery-instructions">Special Instructions</label>
+                                    <textarea id="delivery-instructions" name="deliveryInstructions" rows="3" placeholder="Any special delivery instructions..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h2>Payment Information</h2>
+                                <div class="form-group">
+                                    <fieldset>
+                                        <legend>Payment Method</legend>
+                                        <div class="radio-group">
+                                            <div class="radio-item">
+                                                <input type="radio" id="credit-card" name="paymentMethod" value="credit-card" checked>
+                                                <label for="credit-card">Credit/Debit Card</label>
+                                            </div>
+                                            <div class="radio-item">
+                                                <input type="radio" id="cash" name="paymentMethod" value="cash">
+                                                <label for="cash">Cash on Delivery</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                
+                                <div class="card-fields">
+                                    <div class="form-group">
+                                        <label for="card-number">Card Number <span class="required" aria-label="required">*</span></label>
+                                        <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" aria-describedby="card-number-error">
+                                        <div class="error-message" id="card-number-error" role="alert" aria-live="polite"></div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="card-expiry">Expiry Date <span class="required" aria-label="required">*</span></label>
+                                            <input type="text" id="card-expiry" name="cardExpiry" placeholder="MM/YY" aria-describedby="card-expiry-error">
+                                            <div class="error-message" id="card-expiry-error" role="alert" aria-live="polite"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="card-cvv">CVV <span class="required" aria-label="required">*</span></label>
+                                            <input type="text" id="card-cvv" name="cardCvv" placeholder="123" aria-describedby="card-cvv-error">
+                                            <div class="error-message" id="card-cvv-error" role="alert" aria-live="polite"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="card-name">Name on Card <span class="required" aria-label="required">*</span></label>
+                                        <input type="text" id="card-name" name="cardName" aria-describedby="card-name-error">
+                                        <div class="error-message" id="card-name-error" role="alert" aria-live="polite"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-large">
+                                    <span class="btn-text">Place Order</span>
+                                    <span class="btn-loading" aria-hidden="true">Processing...</span>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <!-- Order Success Message -->
+                        <div class="order-success" id="order-success" style="display: none;" role="alert" aria-live="polite">
+                            <div class="success-content">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <h2>Order Placed Successfully!</h2>
+                                <p>Thank you for your order. We'll prepare your food with care and deliver it soon.</p>
+                                <div class="order-details">
+                                    <p><strong>Order Number:</strong> <span id="order-number"></span></p>
+                                    <p><strong>Estimated Delivery:</strong> <span id="estimated-delivery"></span></p>
+                                </div>
+                                <div class="success-actions">
+                                    <a href="menu.html" class="btn btn-secondary">Order More</a>
+                                    <a href="index.html" class="btn btn-primary">Back to Home</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                        <div class="summary-content">
+                            <h2>Order Summary</h2>
+                            
+                            <div class="summary-items" id="summary-items">
+                                <div class="empty-cart">
+                                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                    <p>Your cart is empty</p>
+                                    <a href="menu.html" class="btn btn-primary">Browse Menu</a>
+                                </div>
+                            </div>
+                            
+                            <div class="summary-totals" id="summary-totals" style="display: none;">
+                                <div class="total-row">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotal">D0.00</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>Delivery Fee:</span>
+                                    <span id="delivery-fee">D3.99</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>Tax:</span>
+                                    <span id="tax">D0.00</span>
+                                </div>
+                                <div class="total-row total-final">
+                                    <span>Total:</span>
+                                    <span id="final-total">D0.00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="delivery-time">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                <span>Estimated delivery: 30-45 minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chew & Cheer</h3>
+                    <p>Bringing delicious food and refreshing drinks to your table since day one.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> +220 2649610</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> chewcheer@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chew & Cheer Food and Drinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

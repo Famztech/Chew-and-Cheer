@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Chew & Cheer Food and Drinks</title>
+    <meta name="description" content="Explore our delicious menu featuring chicken, fish, shawarma, burgers, pizza, seafood, and refreshing drinks.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Chew & Cheer Food and Drinks Logo" class="logo-img">
+                    <span class="logo-text">Chew & Cheer</span>
+                </div>
+                
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                    <li role="none"><a href="menu.html" class="nav-link active" role="menuitem" aria-current="page">Menu</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="order.html" class="nav-link order-btn" role="menuitem">Order Now</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <button class="cart-toggle" aria-label="View shopping cart">
+        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+        <span class="cart-count">0</span>
+    </button>
+
+    <main id="main-content" role="main">
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Menu</h1>
+                <p>Discover our delicious selection of food and drinks</p>
+            </div>
+        </section>
+
+        <!-- Menu Filter -->
+        <section class="menu-filter" aria-labelledby="filter-title">
+            <div class="container">
+                <h2 id="filter-title" class="sr-only">Filter menu items</h2>
+                <div class="filter-buttons" role="tablist" aria-label="Menu categories">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="menu-items">All Items</button>
+                    <button class="filter-btn" data-filter="food" role="tab" aria-selected="false" aria-controls="menu-items">Food</button>
+                    <button class="filter-btn" data-filter="drinks" role="tab" aria-selected="false" aria-controls="menu-items">Drinks</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Items -->
+        <section class="menu-items" id="menu-items" role="tabpanel" aria-labelledby="filter-title">
+            <div class="container">
+                <!-- Food Items -->
+                <div class="menu-category" data-category="food">
+                    <h2>Food</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item" data-type="food">
+                            <img src="images/chicken-chips.jpg" alt="Chicken and chips meal" class="menu-img">
+                            <div class="menu-content">
+                                <h3>Chicken and Chips</h3>
+                                <p>Crispy fried chicken served with golden chips and our special sauce</p>
+                                <div class="menu-price">D200</div>
+                                <button class="btn btn-primary add-to-cart" data-item="chicken-chips" aria-label="Add Chicken and Chips to cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-type="food">
+                            <img src="images/fish-chips.jpg" alt="Fried fish and chips meal" class="menu-img">
+                            <div class="menu-content">
+                                <h3>Fried Fish and Chips</h3>
+                                <p>Fresh fish fillet, battered and fried to perfection with crispy chips</p>
+                                <div class="menu-price">D350</div>
+                                <button class="btn btn-primary add-to-cart" data-item="fish-chips" aria-label="Add Fried Fish and Chips to cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-type="food">
+                            <img src="images/shawarma.jpg" alt="Shawarma wrap" class="menu-img">
+                            <div class="menu-content">
+                                <h3>Shawarma</h3>
+                                <p>Tender marinated meat wrapped in fresh pita with vegetables and sauce</p>
+                                <div class="menu-price">D175</div>
+                                <button class="btn btn-primary add-to-cart" data-item="shawarma" aria-label="Add Shawarma to cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-type="food">
+                            <img src="images/burger.jpg" alt="Gourmet burger" class="menu-img">
+                            <div class="menu-content">
+                                <h3>Burger</h3>
+                                <p>Juicy beef patty with fresh lettuce, tomato, and our signature sauce</p>
+                                <div class="menu-price">D250</div>
+                                <button class="btn btn-primary add-to-cart" data-item="burger" aria-label="Add Burger to cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-type="food">
+                            <img src="images/pizza.jpg" alt="Fresh pizza" class="menu-img">
+                            <div class="menu-content">
+                                <h3>Pizza</h3>
+                                <p>Wood-fired pizza with fresh mozzarella, tomato sauce, and your choice of toppings</p>
+                                <div class="menu-price">D550</div>
+                                <button class="btn btn-primary add-to-cart" data-item="pizza" aria-label="Add Pizza to cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-type="food">
+                            <img src="images/seafood.jpg" alt="Fresh seafood platter" class="menu-img">
+                            <div class="menu-content">
+                                <h3>Sea Food</h3>
+                                <p>Fresh catch of the day with grilled vegetables and lemon butter sauce</p>
+                                <div class="menu-price">D400</div>
+                                <button class="btn btn-primary add-to-cart" data-item="seafood" aria-label="Add Sea Food to cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-category" data-category="drinks">
+                    <h2>Drinks</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item" data-type="drinks">
+                            <img src="images/slush.jpg" alt="Colorful slush drink" class="menu-img">
+                            <div class="menu-content">
+                                <h3>Slush</h3>
+                                <p>Refreshing frozen drink available in multiple flavors</p>
+                                <div class="menu-price">D75</div>
+                                <button class="btn btn-primary add-to-cart" data-item="slush" aria-label="Add Slush to cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-type="drinks">
+                            <img src="images/canned-drinks.jpg" alt="Assorted canned drinks" class="menu-img">
+                            <div class="menu-content">
+                                <h3>Canned Drinks</h3>
+                                <p>Selection of sodas, juices, and energy drinks</p>
+                                <div class="menu-price">D50</div>
+                                <button class="btn btn-primary add-to-cart" data-item="canned-drinks" aria-label="Add Canned Drinks to cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-type="drinks">
+                            <img src="images/milkshakes.jpg" alt="Creamy milkshakes" class="menu-img">
+                            <div class="menu-content">
+                                <h3>Milkshakes</h3>
+                                <p>Thick and creamy milkshakes in vanilla, chocolate, and strawberry</p>
+                                <div class="menu-price">D100</div>
+                                <button class="btn btn-primary add-to-cart" data-item="milkshakes" aria-label="Add Milkshakes to cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Summary (Hidden by default) -->
+        <div class="cart-summary" id="cart-summary" aria-live="polite" aria-label="Shopping cart summary">
+            <div class="cart-content">
+                <h3>Your Order</h3>
+                <div class="cart-items" id="cart-items"></div>
+                <div class="cart-total">
+                    <strong>Total: D<span id="cart-total">0.00</span></strong>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-secondary" id="clear-cart">Clear Cart</button>
+                    <a href="order.html" class="btn btn-primary">Proceed to Order</a>
+                </div>
+                <button class="cart-close" id="cart-close" aria-label="Close cart">&times;</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chew & Cheer</h3>
+                    <p>Bringing delicious food and refreshing drinks to your table since day one.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> +220 2649610</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> chewcheer@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chew & Cheer Food and Drinks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
